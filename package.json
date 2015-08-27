@@ -1,7 +1,7 @@
 {
   "name": "node-iftttmaker",
-  "version": "1.0.0",
-  "description": "Sending requests to IFTTT Maker channel by node.js",
+  "version": "1.0.1",
+  "description": "Sending requests to IFTTT Maker channel with node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

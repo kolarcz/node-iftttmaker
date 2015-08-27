@@ -1,5 +1,5 @@
 # node-iftttmaker
-Sending requests to IFTTT Maker channel by `node.js`
+Sending requests to IFTTT Maker channel with `node.js`
 
 ## Instalation
 `npm install node-iftttmaker`
