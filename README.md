@@ -6,7 +6,7 @@ Sending requests to IFTTT Maker channel with `node.js`
 
 ## Methods
 
-### IFTTTMaker.__construct(*apiKey*)
+### require('node-iftttmaker')(*apiKey*)
 Creates an instance of the IFTTTMaker with IFTTT Maker *apiKey*
 
 ### IFTTTMaker.send(*action* [, *value1* [, *value2* [, *value3*]]] [, *callback(error)*])
