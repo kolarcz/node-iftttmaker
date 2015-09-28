@@ -14,11 +14,10 @@ Sends a request with specified *action* and values *value1*, *value2* and *value
 
 ## Example
 ```javascript
-var nodeIFTTTMaker = require('node-iftttmaker');
-
 var apiKey = 'VJWqWLSLX3gfbvhR1bmYfi';
+var IFTTTMaker = require('node-iftttmaker')(apiKey);
+
 var action = 'notify';
-var IFTTTMaker = new nodeIFTTTMaker(apiKey);
 
 IFTTTMaker.send(action, 'hello', 'world', function (error) {
   if (error) {

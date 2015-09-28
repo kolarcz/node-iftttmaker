@@ -1,6 +1,6 @@
 {
   "name": "node-iftttmaker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sending requests to IFTTT Maker channel with node.js",
   "main": "index.js",
   "scripts": {
