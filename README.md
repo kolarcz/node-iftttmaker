@@ -2,7 +2,7 @@
 Sending requests to IFTTT Maker channel with `node.js`
 
 ## Instalation
-`npm install node-iftttmaker`
+`npm install iftttmaker`
 
 ## Methods
 
@@ -15,7 +15,7 @@ Sends a request with specified *action* and values *value1*, *value2* and *value
 ## Example
 ```javascript
 var apiKey = 'VJWqWLSLX3gfbvhR1bmYfi';
-var IFTTTMaker = require('node-iftttmaker')(apiKey);
+var IFTTTMaker = require('iftttmaker')(apiKey);
 
 var action = 'notify';
 
