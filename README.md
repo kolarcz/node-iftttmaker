@@ -7,10 +7,10 @@ Sending requests to IFTTT Maker channel with `node.js`
 ## Methods
 
 ### require('iftttmaker')(*apiKey*)
-Creates an instance of the IFTTTMaker with IFTTT Maker *apiKey*
+Creates an instance of the IFTTTMaker with IFTTT Maker *apiKey*.
 
 ### IFTTTMaker.send(*action* [, *value1* [, *value2* [, *value3*]]] [, *callback(error)*])
-Sends a request with specified *action* and values *value1*, *value2* and *value3* then return to *callback*
+Sends a request with specified *action* and values *value1*, *value2* and *value3* and return Promise. You can also use *callback*.
 
 ## Example
 ```javascript
@@ -19,6 +19,14 @@ var IFTTTMaker = require('iftttmaker')(apiKey);
 
 var action = 'notify';
 
+// with promise
+IFTTTMaker.send(action, 'hello', 'world').then(function () {
+  console.log('Request was sent');
+}).catch(function (error) {
+  console.log('The request could not be sent:', error);
+});
+
+// or as callback
 IFTTTMaker.send(action, 'hello', 'world', function (error) {
   if (error) {
     console.log('The request could not be sent:', error);

@@ -41,14 +41,20 @@ IFTTTMaker.prototype = {
       }
     }
 
-    HTTP.get(url, function (res) {
-      if (res.statusCode == '200' || res.statusCode == '304') {
-        args.callback(false);
-      } else {
-        args.callback('Bad response code ' + res.statusCode);
-      }
-    }).on('error', function (e) {
-      args.callback(e);
+    return new Promise(function (resolve, reject) {
+      HTTP.get(url, function (res) {
+        if (res.statusCode == '200' || res.statusCode == '304') {
+          resolve();
+          args.callback(false);
+        } else {
+          var err = 'Bad response code ' + res.statusCode;
+          reject(err);
+          args.callback(err);
+        }
+      }).on('error', function (e) {
+        reject(e);
+        args.callback(e);
+      });
     });
   }
 
