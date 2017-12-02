@@ -28,5 +28,8 @@
     "eslint": "^3.3.0",
     "eslint-config-airbnb-base": "^5.0.2",
     "eslint-plugin-import": "^1.13.0"
+  },
+  "dependencies": {
+    "https-proxy-agent": "^2.1.1"
   }
 }
