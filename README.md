@@ -15,6 +15,9 @@ Sends a request with specified *event* and values *value1*, *value2* and *value3
 ### IFTTTMaker.send({ event: *event*, values: { value1: *value1*, ... *value3* }} [, *callback(error)*])
 Another option with params as object.
 
+### IFTTTMaker.setProxy(*proxyAddress*)
+Set proxy to connect to.
+
 
 ## Examples
 ```javascript
@@ -31,6 +34,9 @@ IFTTTMaker.send('notify', 'hello', 'world').then(function () {
 ```javascript
 var apiKey = 'VJWqWLSLX3gfbvhR1bmYfi';
 var IFTTTMaker = require('iftttmaker')(apiKey);
+
+// do you need to connect via proxy?
+// IFTTTMaker.setProxy('https://10.0.0.3:1234');
 
 var request = {
   event: 'notify',
