@@ -1,5 +1,5 @@
 import https from 'https';
-import url from 'url'
+import url from 'url';
 import qs from 'querystring';
 import HttpsProxyAgent from 'https-proxy-agent';
 import parseArgs from './parseArgs';
@@ -22,7 +22,7 @@ class IFTTTMaker {
       endpoint += `/trigger/${qs.escape(event)}/with/key/${qs.escape(this.apiKey)}`;
       endpoint += `?${qs.stringify(values)}`;
 
-      let options = url.parse(endpoint);
+      const options = url.parse(endpoint);
 
       if (this.proxy) {
         options.agent = new HttpsProxyAgent(this.proxy);
